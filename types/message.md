@@ -26,4 +26,4 @@
 
 ### References
 
-- [Attachment](/references/types/attachment)
+- [Attachment](./attachment.md)
