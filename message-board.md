@@ -12,7 +12,7 @@ GET /api/MessageBoard/GetMessages
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -46,7 +46,7 @@ GET /api/MessageBoard/GetMessage
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 | guid          | yes      |                            | `string`                               | the message GUID                                   |
 
 ### Reponse Body
@@ -76,7 +76,7 @@ GET /api/MessageBoard/GetAdTypes
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -100,7 +100,7 @@ GET /api/MessageBoard/GetKeys
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -124,7 +124,7 @@ GET /api/MessageBoard/GetFormats
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -148,7 +148,7 @@ GET /api/MessageBoard/GetStocks
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -172,7 +172,7 @@ POST /api/MessageBoard/AddMessage
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Request Body
 
@@ -205,7 +205,7 @@ DELETE /api/MessageBoard/DeleteMessage
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 | guid          | yes      |                            | `string`                               | the message GUID                                   |
 
 ### Reponse Body
@@ -229,7 +229,7 @@ POST /api/MessageBoard/DeleteMessages
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Request Body
 
@@ -258,7 +258,7 @@ GET /api/MessageBoard/DownloadAttachment
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 | guid          | yes      |                            | `string`                               | the attachment GUID                                |
 
 ### Reponse Body
@@ -279,7 +279,7 @@ GET /api/MessageBoard/DownloadSpreadsheet
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
