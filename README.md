@@ -1,5 +1,3 @@
-# Grandville Printing Company API
-
-### Nexgen
+## Nexgen
 
 - [Message Board](./message-board.md)
