@@ -61,8 +61,8 @@ interface {
 
 ### References
 
-- [Message](/references/types/message)
-- [Attachment](/references/types/attachment)
+- [Message](./types/message)
+- [Attachment](./types/attachment)
 
 ## Get Ad Types
 
@@ -191,7 +191,7 @@ interface {
 
 ### Type References
 
-- [Message](/references/types/message)
+- [Message](./types/message)
 
 ## Delete Message
 
