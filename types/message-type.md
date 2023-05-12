@@ -1,17 +1,16 @@
 # Message Type
 
-| Key     | Type      |  Description                                        |
-| ------- | --------- |  -------------------------------------------------- |
-| messageType | `string` | |
-| messageTypeDesc | `string` | |
-
-
 ```typescript
 interface MessageType {
     messageType:     number;
     messageTypeDesc: string;
 }
 ```
+
+| Key     | Type      |  Description                                        |
+| ------- | --------- |  -------------------------------------------------- |
+| messageType | `string` | |
+| messageTypeDesc | `string` | |
 
 ### Example
 

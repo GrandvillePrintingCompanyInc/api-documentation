@@ -1,12 +1,5 @@
 # Attachment
 
-| Key     | Type      |  Description                                        |
-| ------- | --------- |  -------------------------------------------------- |
-| name    | `string`  |  file name used when downloading |
-| data    | `string`  |  base64 encoded file |
-| dataKey | `string`  |  UUID v4 |
-
-
 ```typescript
 interface Attachment {
     name:       string;
@@ -14,6 +7,12 @@ interface Attachment {
     dataKey:    string;
 }
 ```
+
+| Key     | Type      |  Description                                        |
+| ------- | --------- |  -------------------------------------------------- |
+| name    | `string`  |  file name used when downloading |
+| data    | `string`  |  base64 encoded file |
+| dataKey | `string`  |  UUID v4 |
 
 ### Example
 
