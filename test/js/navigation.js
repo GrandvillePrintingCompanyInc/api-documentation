@@ -1,1 +1,0 @@
-import{message as i}from"./messaging.js";function a(e){window.history.pushState(null,null,`/${e.replace(/^\/|\/$|\.md$/gi,"")}`),i({recipient:"renderer",data:{slug:e}}),i({recipient:"navigation",data:{slug:e}})}export{a as navigate};
