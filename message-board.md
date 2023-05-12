@@ -1,165 +1,5 @@
 # Message Board
 
-## Get Messages
-
-Returns all the message board rows.
-
-```plaintext
-GET /api/MessageBoard/GetMessages
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-
-### Reponse Body
-
-```typescript
-interface {
-    success: boolean,
-    error: string,
-    Array<{
-        guid: string,
-        subject: string,
-        adType: string,
-        keys: Array<string>,
-        originalStartDate: string,
-        postDte: string,
-        hasViewed: boolean,
-        isUrgent: boolean,
-        hasAttachments: boolean,
-    }>,
-}
-```
-
-## Get Message
-
-Returns a message by GUID.
-
-```plaintext
-GET /api/MessageBoard/GetMessage
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-| guid          | yes      |                            | `string`                               | the message GUID                                   |
-
-### Reponse Body
-
-```typescript
-interface {
-    success: boolean,
-    error: string,
-    data: Message
-}
-```
-
-### References
-
-- [Message](./types/message)
-- [Attachment](./types/attachment)
-
-## Get Ad Types
-
-Returns an array of Ad Types.
-
-```plaintext
-GET /api/MessageBoard/GetAdTypes
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-
-### Reponse Body
-
-```typescript
-interface {
-    success: boolean,
-    error: string,
-    data: Array<string>
-}
-```
-
-## Get Keys
-
-Returns an array of department keys.
-
-```plaintext
-GET /api/MessageBoard/GetKeys
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-
-### Reponse Body
-
-```typescript
-interface {
-    success: boolean,
-    error: string,
-    data: Array<string>
-}
-```
-
-## Get Formats
-
-Returns an array of format options.
-
-```plaintext
-GET /api/MessageBoard/GetFormats
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-
-### Reponse Body
-
-```typescript
-interface {
-    success: boolean,
-    error: string,
-    data: Array<string>
-}
-```
-
-## Get Stocks
-
-Returns an array of stock options.
-
-```plaintext
-GET /api/MessageBoard/GetStocks
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-
-### Reponse Body
-
-```typescript
-interface {
-    success: boolean,
-    error: string,
-    data: Array<string>
-}
-```
-
 ## Add Message
 
 Add or update a message. Updates are performed when the Message `guid` value is provided.
@@ -176,9 +16,7 @@ POST /api/MessageBoard/AddMessage
 
 ### Request Body
 
-```typescript
-Message
-```
+[Message](./types/message.md)
 
 ### Reponse Body
 
@@ -189,9 +27,7 @@ interface {
 }
 ```
 
-### Type References
-
-- [Message](./types/message)
+---
 
 ## Delete Message
 
@@ -216,6 +52,8 @@ interface {
     error: string,
 }
 ```
+
+---
 
 ## Delete Messages
 
@@ -246,33 +84,14 @@ interface {
 }
 ```
 
-## Download Attachment
+---
 
-Downloads a messages attachment.
+## Get Ad Types
 
-```plaintext
-GET /api/MessageBoard/DownloadAttachment
-```
-
-### Parameters
-
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-| guid          | yes      |                            | `string`                               | the attachment GUID                                |
-
-### Reponse Body
+Returns an array of Ad Types.
 
 ```plaintext
-application/octet-stream
-```
-
-## Download Spreadsheet
-
-Creates and downloads a message report spreadsheet (CSV).
-
-```plaintext
-GET /api/MessageBoard/DownloadSpreadsheet
+GET /api/MessageBoard/GetAdTypes
 ```
 
 ### Parameters
@@ -283,26 +102,197 @@ GET /api/MessageBoard/DownloadSpreadsheet
 
 ### Reponse Body
 
-```plaintext
-text/csv
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: string[],
+}
 ```
 
-## Download Visibility Report
+---
 
-Creates and downloads a visibility report spreadsheet (CSV).
+## Get Message Types
+
+Returns an array of Message Types.
 
 ```plaintext
-GET /api/MessageBoard/DownloadVisibilityReport
+GET /api/MessageBoard/GetMessageTypes
 ```
 
 ### Parameters
 
 | Parameter     | Required | Default                    | Valid options                          | Description                                        |
 | ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Comapny    |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
-```plaintext
-text/csv
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: MessageType[],
+}
 ```
+
+### References
+
+- [Message Type](./types/message-type.md)
+
+---
+
+## Get Keys
+
+Returns an array of department keys.
+
+```plaintext
+GET /api/MessageBoard/GetKeys
+```
+
+### Parameters
+
+| Parameter     | Required | Default                    | Valid options                          | Description                                        |
+| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+
+### Reponse Body
+
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: string[],
+}
+```
+
+---
+
+## Get Poster Names
+
+Returns an array of `postedBy` names pulled from previous messages.
+
+```plaintext
+GET /api/MessageBoard/GetPosterNames
+```
+
+### Parameters
+
+| Parameter     | Required | Default                    | Valid options                          | Description                                        |
+| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+
+### Reponse Body
+
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: string[],
+}
+```
+
+---
+
+## Get Issue Types
+
+Returns an array of issue types.
+
+```plaintext
+GET /api/MessageBoard/GetIssueTypes
+```
+
+### Parameters
+
+| Parameter     | Required | Default                    | Valid options                          | Description                                        |
+| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+
+### Reponse Body
+
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: string[],
+}
+```
+
+---
+
+## Get Solution Types
+
+Returns an array of solution types.
+
+```plaintext
+GET /api/MessageBoard/GetSolutionTypes
+```
+
+### Parameters
+
+| Parameter     | Required | Default                    | Valid options                          | Description                                        |
+| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+
+### Reponse Body
+
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: string[],
+}
+```
+
+---
+
+## Get Formats
+
+Returns an array of format options.
+
+```plaintext
+GET /api/MessageBoard/GetFormats
+```
+
+### Parameters
+
+| Parameter     | Required | Default                    | Valid options                          | Description                                        |
+| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+
+### Reponse Body
+
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: Array<string>
+}
+```
+
+---
+
+## Get Stocks
+
+Returns an array of stock options.
+
+```plaintext
+GET /api/MessageBoard/GetStocks
+```
+
+### Parameters
+
+| Parameter     | Required | Default                    | Valid options                          | Description                                        |
+| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+
+### Reponse Body
+
+```typescript
+interface {
+    success: boolean,
+    error: string,
+    data: Array<string>
+}
+```
+
