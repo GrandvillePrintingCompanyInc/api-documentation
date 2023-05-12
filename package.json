@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "build": "docs -o ./test -c ./cname",
+    "watch": "run-p watch:*",
+    "watch:docs": "npm-watch",
+    "watch:server": "serve ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrandvillePrintingCompanyInc/api-documentation.git"
+  },
+  "docs": {
+    "name": "API Documentation",
+    "description": "Grandville Printing Company API Documentation"
+  },
+  "devDependencies": {
+    "@grandvilleprintingcompanyinc/dev-docs": "^1.1.2",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0",
+    "serve": "^14.2.0"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "docs"
+      ],
+      "extensions": "md",
+      "quiet": false
+    }
+  }
+}
