@@ -1,10 +1,11 @@
 # Attachment
 
-| Key     | Type      | Default | Description                                        |
-| ------- | --------- | ------- | -------------------------------------------------- |
-| name    | `string`  | `null`  | file name used when downloading |
-| data    | `string`  | `null`  | base64 encoded file |
-| dataKey | `string` | `null`  | UUID v4 |
+| Key     | Type      |  Description                                        |
+| ------- | --------- |  -------------------------------------------------- |
+| name    | `string`  |  file name used when downloading |
+| data    | `string`  |  base64 encoded file |
+| dataKey | `string`  |  UUID v4 |
+
 
 ```typescript
 interface Attachment {

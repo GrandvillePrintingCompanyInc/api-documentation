@@ -10,9 +10,9 @@ POST /api/MessageBoard/AddMessage
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                          | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Request Body
 
@@ -39,10 +39,10 @@ DELETE /api/MessageBoard/DeleteMessage
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
-| guid          | yes      |                            | `string`                               | the message GUID                                   |
+| Parameter     | Required | Type                          | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
+| guid          | yes      | `string`                               | the message GUID                                   |
 
 ### Reponse Body
 
@@ -65,14 +65,14 @@ POST /api/MessageBoard/DeleteMessages
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Request Body
 
 ```typescript
-Array<string>
+string[]
 ```
 
 ### Reponse Body
@@ -96,9 +96,9 @@ GET /api/MessageBoard/GetAdTypes
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -122,9 +122,9 @@ GET /api/MessageBoard/GetMessageTypes
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -152,9 +152,9 @@ GET /api/MessageBoard/GetKeys
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -178,9 +178,9 @@ GET /api/MessageBoard/GetPosterNames
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -204,9 +204,9 @@ GET /api/MessageBoard/GetIssueTypes
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -230,9 +230,9 @@ GET /api/MessageBoard/GetSolutionTypes
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -256,9 +256,9 @@ GET /api/MessageBoard/GetFormats
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -266,7 +266,7 @@ GET /api/MessageBoard/GetFormats
 interface {
     success: boolean,
     error: string,
-    data: Array<string>
+    data: string[],
 }
 ```
 
@@ -282,9 +282,9 @@ GET /api/MessageBoard/GetStocks
 
 ### Parameters
 
-| Parameter     | Required | Default                    | Valid options                          | Description                                        |
-| ------------- | -------- | -------------------------- | -------------------------------------- | -------------------------------------------------- |
-| key           | yes      |                            | `string`                               | API key provided by Grandville Printing Company    |
+| Parameter     | Required | Type                                   | Description                                        |
+| ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
+| key           | yes      | `string`                               | API key provided by Grandville Printing Company    |
 
 ### Reponse Body
 
@@ -292,7 +292,7 @@ GET /api/MessageBoard/GetStocks
 interface {
     success: boolean,
     error: string,
-    data: Array<string>
+    data: string[]
 }
 ```
 

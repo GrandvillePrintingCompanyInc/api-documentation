@@ -1,9 +1,10 @@
 # Message Type
 
-| Key     | Type      | Default | Description                                        |
-| ------- | --------- | ------- | -------------------------------------------------- |
-| messageType | `string` | | |
-| messageTypeDesc | `string` | | |
+| Key     | Type      |  Description                                        |
+| ------- | --------- |  -------------------------------------------------- |
+| messageType | `string` | |
+| messageTypeDesc | `string` | |
+
 
 ```typescript
 interface MessageType {

@@ -26,28 +26,28 @@ interface Welcome {
 }
 ```
 
-| Key     | Type      | Default | Description                                        |
-| ------- | --------- | ------- | -------------------------------------------------- |
-| subject | `string`  |         | Message subject                                    |
-| postedBy | `string` |         | Who posted the message                             |
-| messageType | [`MessageType`](./message-type.md) | | Message type |
-| adType | `string` | | Ad type |
-| buyerNumber | `string` | | Buyer number |
-| format | `string` | | Ad format |
-| stock | `string` | | Stock |
-| originalStartDate | `string` | | Original start date |
-| newStartDate | `string` | | New start date |
-| originalEndDate | `string` | | Original end date |
-| newEndDate | `string` | | New end date |
-| issueType | `string` | | Issue type |
-| issue | `string` | | Issue |
-| solutionType | `string` | | Solution type |
-| solution | `string` | | Solution |
-| UPCs | `string[]` | | UPCs |
-| stores | `int[]` | | Stores |
-| keys | `string[]` | | Keys |
-| urgent | `boolean` | | Urgent |
-| attachments | [`Attachment[]`](./attachment.md) | | Attachments |
+| Key     | Type      |  Description                                        |
+| ------- | --------- |  -------------------------------------------------- |
+| subject | `string`  | Message subject                                    |
+| postedBy | `string` | Who posted the message                             |
+| messageType | [MessageType](./message-type.md) | Message type |
+| adType | `string` | Ad type |
+| buyerNumber | `string` | Buyer number |
+| format | `string` | Ad format |
+| stock | `string` | Stock |
+| originalStartDate | `string` | Original start date |
+| newStartDate | `string` | New start date |
+| originalEndDate | `string` | Original end date |
+| newEndDate | `string` | New end date |
+| issueType | `string` | Issue type |
+| issue | `string` | Issue |
+| solutionType | `string` | Solution type |
+| solution | `string` | Solution |
+| UPCs | `string[]` | UPCs |
+| stores | `int[]` | Stores |
+| keys | `string[]` | Keys |
+| urgent | `boolean` | Urgent |
+| attachments | [Attachment[]](./attachment.md) | Attachments |
 | guid | `string` | `null` | Unique ID of the message to update, creates new message when `null` |
 
 ### Example
