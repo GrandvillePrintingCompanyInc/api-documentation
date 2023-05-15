@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>API Documentation</title>
+    <meta name="description" content="Grandville Printing Company API Documentation">
+    <meta name="keywords" content="">
+    
+
+    
+
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/brixi.css" rel="stylesheet">
+    <link href="/css/skeleton.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
+    <link href="/css/navigation.css" rel="stylesheet">
+    <link href="/css/docs.css" rel="stylesheet">
+    <link href="/css/subnav.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/highlight.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@^11/highlight.min.js"></script>
+
+    <script type="module" src="/js/bootstrap.js"></script>
+</head>
+<body>
+    <header flex="row nowrap items-center justify-between">
+        <button id="nav-menu" onclick="document.documentElement.classList.toggle('menu-open');" aria-label="toggle navigation menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="/" class="font-bold" id="logo">
+            API Documentation
+        </a>
+        <div flex="items-center row nowrap">
+            <nav>
+                
+                
+                
+                
+            </nav>
+        </div>
+    </header>
+    <main>
+        
+        <static-navigation-component>
+            <a class="" href="/index" data-slug="index">index</a>
+        <button data-slug="message-board" class="is-open">
+            <span>message board</span>
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img" viewBox="0 0 192 512"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+            </i>
+        </button>
+        <nav-children-container>
+            <a class="" href="/message-board/add-message" data-slug="message-board/add-message">add message</a><a class="" href="/message-board/delete-message" data-slug="message-board/delete-message">delete message</a><a class="" href="/message-board/delete-messages" data-slug="message-board/delete-messages">delete messages</a><a class="" href="/message-board/get-ad-types" data-slug="message-board/get-ad-types">get ad types</a><a class="" href="/message-board/get-formats" data-slug="message-board/get-formats">get formats</a><a class="is-active" href="/message-board/get-issue-types" data-slug="message-board/get-issue-types">get issue types</a><a class="" href="/message-board/get-keys" data-slug="message-board/get-keys">get keys</a><a class="" href="/message-board/get-message-types" data-slug="message-board/get-message-types">get message types</a><a class="" href="/message-board/get-poster-names" data-slug="message-board/get-poster-names">get poster names</a><a class="" href="/message-board/get-solution-types" data-slug="message-board/get-solution-types">get solution types</a><a class="" href="/message-board/get-stocks" data-slug="message-board/get-stocks">get stocks</a>
+        <button data-slug="message-board/types" class="">
+            <span>types</span>
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img" viewBox="0 0 192 512"><path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg>
+            </i>
+        </button>
+        <nav-children-container>
+            <a class="" href="/message-board/types/attachment" data-slug="message-board/types/attachment">attachment</a><a class="" href="/message-board/types/message-type" data-slug="message-board/types/message-type">message type</a><a class="" href="/message-board/types/message" data-slug="message-board/types/message">message</a>
+        </nav-children-container>
+    
+        </nav-children-container>
+    
+        </static-navigation-component>
+    
+        <static-doc-view>
+            <h1 id="get-issue-types">Get Issue Types</h1>
+<p>Returns an array of issue types.</p>
+<pre><code class="language-plaintext">GET /api/MessageBoard/GetIssueTypes
+</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>key</td>
+<td>yes</td>
+<td><code>string</code></td>
+<td>API key provided by Grandville Printing Company</td>
+</tr>
+</tbody></table>
+<h3 id="reponse-body">Reponse Body</h3>
+<pre><code class="language-typescript">interface {
+    success: boolean,
+    error: string,
+    data: string[],
+}
+</code></pre>
+
+        </static-doc-view>
+        <static-subnav-component></static-subnav-component>
+    </main>
+    <textarea id="clipboard-input" tabindex="-1"></textarea>
+</body>
+</html>
