@@ -6,7 +6,7 @@ Returns an array of Ad Types.
 GET /api/MessageBoard/GetAdTypes
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                                   | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -22,3 +22,8 @@ interface {
 }
 ```
 
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/GetAdTypes?key={secret}'
+```

@@ -6,7 +6,7 @@ Returns an array of stock options.
 GET /api/MessageBoard/GetStocks
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                                   | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -20,4 +20,10 @@ interface {
     error: string,
     data: string[]
 }
+```
+
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/GetStocks?key={secret}'
 ```

@@ -6,7 +6,7 @@ Returns an array of issue types.
 GET /api/MessageBoard/GetIssueTypes
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                                   | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -22,3 +22,8 @@ interface {
 }
 ```
 
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/GetIssueTypes?key={secret}'
+```

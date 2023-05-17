@@ -6,7 +6,7 @@ Returns an array of format options.
 GET /api/MessageBoard/GetFormats
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                                   | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -22,3 +22,8 @@ interface {
 }
 ```
 
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/GetFormats?key={secret}'
+```

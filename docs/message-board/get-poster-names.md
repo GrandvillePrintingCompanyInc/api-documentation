@@ -6,7 +6,7 @@ Returns an array of `postedBy` names pulled from previous messages.
 GET /api/MessageBoard/GetPosterNames
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                                   | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -22,3 +22,8 @@ interface {
 }
 ```
 
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/GetPosterNames?key={secret}'
+```

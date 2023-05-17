@@ -6,7 +6,7 @@ Returns an array of Message Types.
 GET /api/MessageBoard/GetMessageTypes
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                                   | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -25,3 +25,9 @@ interface {
 ### References
 
 - [Message Type](./types/message-type.md)
+
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/GetMessageTypes?key={secret}'
+```

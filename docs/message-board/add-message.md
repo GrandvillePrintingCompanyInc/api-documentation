@@ -6,7 +6,7 @@ Add or update a message. Updates are performed when the Message `guid` value is 
 POST /api/MessageBoard/AddMessage
 ```
 
-### Parameters
+### Query Parameters
 
 | Parameter     | Required | Type                          | Description                                        |
 | ------------- | -------- | -------------------------------------- | -------------------------------------------------- |
@@ -23,4 +23,37 @@ interface {
     success: boolean,
     error: string,
 }
+```
+
+### Example
+
+```bash
+curl 'https://{origin}/api/MessageBoard/AddMessage?key={secret}' \
+-H 'Content-Type: application/json' \
+-d '{
+  "subject": "Example Message",
+  "postedBy": "Jon Smith",
+  "messageType": {
+    "messageType": 0,
+    "messageTypeDesc": "Sign Issue"
+  },
+  "adType": "",
+  "buyerNumber": null,
+  "format": "",
+  "stock": "",
+  "originalStartDate": "",
+  "newStartDate": "",
+  "originalEndDate": "",
+  "newEndDate": "",
+  "issueType": "",
+  "issue": "",
+  "solutionType": "",
+  "solution": "",
+  "UPCs": [],
+  "stores": [],
+  "keys": [],
+  "urgent": false,
+  "attachments": [],
+  "guid": null
+}'
 ```
