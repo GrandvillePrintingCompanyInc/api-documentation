@@ -78,7 +78,7 @@
 <p>Delete a message by GUID.</p>
 <pre><code class="language-plaintext">DELETE /api/MessageBoard/DeleteMessage
 </code></pre>
-<h3 id="parameters">Parameters</h3>
+<h3 id="query-parameters">Query Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -106,6 +106,9 @@
     success: boolean,
     error: string,
 }
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="language-bash">curl -X DELETE &#39;https://{origin}/api/MessageBoard/DeleteMessage?key={secret}&amp;guid=24E220F2-E918-ED11-B3D7-005056855B43&#39;
 </code></pre>
 
         </static-doc-view>

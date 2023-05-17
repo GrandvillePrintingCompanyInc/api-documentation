@@ -78,7 +78,7 @@
 <p>Returns an array of solution types.</p>
 <pre><code class="language-plaintext">GET /api/MessageBoard/GetSolutionTypes
 </code></pre>
-<h3 id="parameters">Parameters</h3>
+<h3 id="query-parameters">Query Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -101,6 +101,9 @@
     error: string,
     data: string[],
 }
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="language-bash">curl &#39;https://{origin}/api/MessageBoard/GetSolutionTypes?key={secret}&#39;
 </code></pre>
 
         </static-doc-view>

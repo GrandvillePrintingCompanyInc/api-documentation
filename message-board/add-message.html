@@ -78,7 +78,7 @@
 <p>Add or update a message. Updates are performed when the Message <code>guid</code> value is provided.</p>
 <pre><code class="language-plaintext">POST /api/MessageBoard/AddMessage
 </code></pre>
-<h3 id="parameters">Parameters</h3>
+<h3 id="query-parameters">Query Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -102,6 +102,36 @@
     success: boolean,
     error: string,
 }
+</code></pre>
+<h3 id="example">Example</h3>
+<pre><code class="language-bash">curl &#39;https://{origin}/api/MessageBoard/AddMessage?key={secret}&#39; \
+-H &#39;Content-Type: application/json&#39; \
+-d &#39;{
+  &quot;subject&quot;: &quot;Example Message&quot;,
+  &quot;postedBy&quot;: &quot;Jon Smith&quot;,
+  &quot;messageType&quot;: {
+    &quot;messageType&quot;: 0,
+    &quot;messageTypeDesc&quot;: &quot;Sign Issue&quot;
+  },
+  &quot;adType&quot;: &quot;&quot;,
+  &quot;buyerNumber&quot;: null,
+  &quot;format&quot;: &quot;&quot;,
+  &quot;stock&quot;: &quot;&quot;,
+  &quot;originalStartDate&quot;: &quot;&quot;,
+  &quot;newStartDate&quot;: &quot;&quot;,
+  &quot;originalEndDate&quot;: &quot;&quot;,
+  &quot;newEndDate&quot;: &quot;&quot;,
+  &quot;issueType&quot;: &quot;&quot;,
+  &quot;issue&quot;: &quot;&quot;,
+  &quot;solutionType&quot;: &quot;&quot;,
+  &quot;solution&quot;: &quot;&quot;,
+  &quot;UPCs&quot;: [],
+  &quot;stores&quot;: [],
+  &quot;keys&quot;: [],
+  &quot;urgent&quot;: false,
+  &quot;attachments&quot;: [],
+  &quot;guid&quot;: null
+}&#39;
 </code></pre>
 
         </static-doc-view>
