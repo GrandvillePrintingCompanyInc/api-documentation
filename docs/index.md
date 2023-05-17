@@ -24,7 +24,7 @@ The following enviroments are available:
 
 The GPC API uses API keys to authenticate requests.
 
-Test mode secret keys have the prefix sk_test_ and live mode secret keys have the prefix sk_live_.
+Test mode secret keys have the prefix `gpc_test_` and live mode secret keys have the `gpc_live_` prefix.
 
 Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.
 
