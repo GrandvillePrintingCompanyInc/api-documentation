@@ -8,6 +8,8 @@ interface Attachment {
 }
 ```
 
+### Details
+
 | Key     | Type      |  Description                                        |
 | ------- | --------- |  -------------------------------------------------- |
 | name    | `string`  |  file name used when downloading |

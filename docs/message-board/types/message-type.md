@@ -7,6 +7,8 @@ interface MessageType {
 }
 ```
 
+### Details
+
 | Key     | Type      |  Description                                        |
 | ------- | --------- |  -------------------------------------------------- |
 | messageType | `string` | |

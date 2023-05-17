@@ -26,6 +26,8 @@ interface Welcome {
 }
 ```
 
+### Details
+
 | Key     | Type      |  Description                                        |
 | ------- | --------- |  -------------------------------------------------- |
 | subject | `string`  | Message subject                                    |
