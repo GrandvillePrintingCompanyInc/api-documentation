@@ -1,7 +1,7 @@
 # Message Type
 
 ```typescript
-interface MessageType {
+interface {
     messageType:     number;
     messageTypeDesc: string;
 }

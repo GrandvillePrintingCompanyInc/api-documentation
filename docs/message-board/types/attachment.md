@@ -1,7 +1,7 @@
 # Attachment
 
 ```typescript
-interface Attachment {
+interface {
     name:       string;
     data:       string;
     dataKey:    string;

@@ -1,7 +1,7 @@
 # Message
 
 ```typescript
-interface Welcome {
+interface {
     subject:           string;
     postedBy:          string;
     messageType:       MessageType;
