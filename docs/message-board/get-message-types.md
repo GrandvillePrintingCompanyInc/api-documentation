@@ -28,6 +28,27 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/GetMessageTypes?key={secret}'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": "",
+    "data": [
+        {
+            "messageType": 0,
+            "messageTypeDesc": "Sign Issue"
+        },
+        {
+            "messageType": 1,
+            "messageTypeDesc": "Ad Correction"
+        }
+    ]
+}
 ```

@@ -24,6 +24,22 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/GetSolutionTypes?key={secret}'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": "",
+    "data": [
+        "Solution Type 1",
+        "Solution Type 2",
+        "Solution Type 3"
+    ]
+}
 ```

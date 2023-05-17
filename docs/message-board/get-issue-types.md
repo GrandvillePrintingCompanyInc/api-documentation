@@ -24,6 +24,22 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/GetIssueTypes?key={secret}'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": "",
+    "data": [
+        "Type 1",
+        "Type 2",
+        "Type 3"
+    ]
+}
 ```

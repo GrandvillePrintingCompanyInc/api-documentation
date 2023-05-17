@@ -24,6 +24,22 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/GetStocks?key={secret}'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": "",
+    "data": [
+        "Stock 55",
+        "Stock 44",
+        "Stock 40"
+    ]
+}
 ```

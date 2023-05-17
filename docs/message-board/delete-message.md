@@ -24,6 +24,17 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl -X DELETE 'https://{origin}/api/MessageBoard/DeleteMessage?key={secret}&guid=24E220F2-E918-ED11-B3D7-005056855B43'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": ""
+}
 ```

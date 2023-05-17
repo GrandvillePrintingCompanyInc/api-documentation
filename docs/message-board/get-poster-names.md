@@ -24,6 +24,21 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/GetPosterNames?key={secret}'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": "",
+    "data": [
+        "Jon Smith",
+        "Jane Johnson"
+    ]
+}
 ```

@@ -24,6 +24,22 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/GetFormats?key={secret}'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": "",
+    "data": [
+        "Format A",
+        "Format B",
+        "Format C"
+    ]
+}
 ```

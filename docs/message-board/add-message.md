@@ -27,6 +27,8 @@ interface {
 
 ### Example
 
+#### Request
+
 ```bash
 curl 'https://{origin}/api/MessageBoard/AddMessage?key={secret}' \
 -H 'Content-Type: application/json' \
@@ -56,4 +58,13 @@ curl 'https://{origin}/api/MessageBoard/AddMessage?key={secret}' \
   "attachments": [],
   "guid": null
 }'
+```
+
+#### Response
+
+```json
+{
+    "success": true,
+    "error": ""
+}
 ```
