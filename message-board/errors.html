@@ -58,7 +58,7 @@
             </i>
         </button>
         <nav-children-container>
-            <a class="" href="/message-board/add-message" data-slug="message-board/add-message">add message</a><a class="" href="/message-board/delete-message" data-slug="message-board/delete-message">delete message</a><a class="" href="/message-board/errors" data-slug="message-board/errors">errors</a><a class="" href="/message-board/get-ad-types" data-slug="message-board/get-ad-types">get ad types</a><a class="is-active" href="/message-board/get-formats" data-slug="message-board/get-formats">get formats</a><a class="" href="/message-board/get-issue-types" data-slug="message-board/get-issue-types">get issue types</a><a class="" href="/message-board/get-keys" data-slug="message-board/get-keys">get keys</a><a class="" href="/message-board/get-message-types" data-slug="message-board/get-message-types">get message types</a><a class="" href="/message-board/get-poster-names" data-slug="message-board/get-poster-names">get poster names</a><a class="" href="/message-board/get-solution-types" data-slug="message-board/get-solution-types">get solution types</a><a class="" href="/message-board/get-stocks" data-slug="message-board/get-stocks">get stocks</a>
+            <a class="" href="/message-board/add-message" data-slug="message-board/add-message">add message</a><a class="" href="/message-board/delete-message" data-slug="message-board/delete-message">delete message</a><a class="is-active" href="/message-board/errors" data-slug="message-board/errors">errors</a><a class="" href="/message-board/get-ad-types" data-slug="message-board/get-ad-types">get ad types</a><a class="" href="/message-board/get-formats" data-slug="message-board/get-formats">get formats</a><a class="" href="/message-board/get-issue-types" data-slug="message-board/get-issue-types">get issue types</a><a class="" href="/message-board/get-keys" data-slug="message-board/get-keys">get keys</a><a class="" href="/message-board/get-message-types" data-slug="message-board/get-message-types">get message types</a><a class="" href="/message-board/get-poster-names" data-slug="message-board/get-poster-names">get poster names</a><a class="" href="/message-board/get-solution-types" data-slug="message-board/get-solution-types">get solution types</a><a class="" href="/message-board/get-stocks" data-slug="message-board/get-stocks">get stocks</a>
         <button data-slug="message-board/types" class="">
             <span>types</span>
             <i>
@@ -74,49 +74,74 @@
         </static-navigation-component>
     
         <static-doc-view>
-            <h1 id="get-formats">Get Formats</h1>
-<p>Returns an array of format options.</p>
-<pre><code class="language-plaintext">GET /api/MessageBoard/GetFormats
-</code></pre>
-<h3 id="query-parameters">Query Parameters</h3>
+            <h1 id="errors">Errors</h1>
+<p>GPC API uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the <code>2xx</code> range indicate success. Codes in the <code>4xx</code> range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a change failed, etc.). Codes in the <code>5xx</code> range indicate an error with GPC&#39;s servers (these are rare).</p>
+<p>Some <code>4xx</code> errors that could be handled programmatically include an error code that briefly explains the error reported.</p>
+<h3 id="http-status-codes">HTTP Status Codes</h3>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Type</th>
+<th>Code</th>
+<th>Status</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>key</td>
-<td>yes</td>
-<td><code>string</code></td>
-<td>API key provided by Grandville Printing Company</td>
+<td><code>200</code></td>
+<td>OK</td>
+<td>Everything worked as expected.</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>Bad Request</td>
+<td>The request was unacceptable, often due to missing a required parameter.</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>Unauthorized</td>
+<td>No valid API key provided.</td>
+</tr>
+<tr>
+<td><code>402</code></td>
+<td>Request Failed</td>
+<td>The parameters were valid but the request failed.</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>Forbidden</td>
+<td>The API key doesn&#39;t have permissions to perform the request.</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>Not Found</td>
+<td>The requested resource doesn&#39;t exist.</td>
+</tr>
+<tr>
+<td><code>429</code></td>
+<td>Too Many Requests</td>
+<td>Too many requests hit the API too quickly.</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>Internal Server Error</td>
+<td>Something went wrong on GPC&#39;s end.</td>
+</tr>
+<tr>
+<td><code>502</code></td>
+<td>Bad Gateway</td>
+<td>Something went wrong on GPC&#39;s end.</td>
+</tr>
+<tr>
+<td><code>503</code></td>
+<td>Service Unavailable</td>
+<td>Something went wrong on GPC&#39;s end.</td>
+</tr>
+<tr>
+<td><code>504</code></td>
+<td>Gateway Timeout</td>
+<td>Something went wrong on GPC&#39;s end.</td>
 </tr>
 </tbody></table>
-<h3 id="reponse-body">Reponse Body</h3>
-<pre><code class="language-typescript">interface {
-    success: boolean,
-    error: string,
-    data: string[],
-}
-</code></pre>
-<h2 id="example">Example</h2>
-<h4 id="request">Request</h4>
-<pre><code class="language-bash">curl &#39;https://{origin}/api/MessageBoard/GetFormats?key={secret}&#39;
-</code></pre>
-<h4 id="response">Response</h4>
-<pre><code class="language-json">{
-    &quot;success&quot;: true,
-    &quot;error&quot;: &quot;&quot;,
-    &quot;data&quot;: [
-        &quot;Format A&quot;,
-        &quot;Format B&quot;,
-        &quot;Format C&quot;
-    ]
-}
-</code></pre>
 
         </static-doc-view>
         <static-subnav-component></static-subnav-component>
