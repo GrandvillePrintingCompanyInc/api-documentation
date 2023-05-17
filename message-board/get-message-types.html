@@ -107,7 +107,24 @@
 <li><a href="./types/message-type.md">Message Type</a></li>
 </ul>
 <h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
 <pre><code class="language-bash">curl &#39;https://{origin}/api/MessageBoard/GetMessageTypes?key={secret}&#39;
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;error&quot;: &quot;&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;messageType&quot;: 0,
+            &quot;messageTypeDesc&quot;: &quot;Sign Issue&quot;
+        },
+        {
+            &quot;messageType&quot;: 1,
+            &quot;messageTypeDesc&quot;: &quot;Ad Correction&quot;
+        }
+    ]
+}
 </code></pre>
 
         </static-doc-view>

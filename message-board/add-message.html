@@ -104,6 +104,7 @@
 }
 </code></pre>
 <h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
 <pre><code class="language-bash">curl &#39;https://{origin}/api/MessageBoard/AddMessage?key={secret}&#39; \
 -H &#39;Content-Type: application/json&#39; \
 -d &#39;{
@@ -132,6 +133,12 @@
   &quot;attachments&quot;: [],
   &quot;guid&quot;: null
 }&#39;
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;error&quot;: &quot;&quot;
+}
 </code></pre>
 
         </static-doc-view>
