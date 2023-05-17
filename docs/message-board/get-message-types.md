@@ -26,7 +26,7 @@ interface {
 
 - [Message Type](./types/message-type.md)
 
-### Example
+## Example
 
 #### Request
 

@@ -25,7 +25,7 @@ interface {
 }
 ```
 
-### Example
+## Example
 
 #### Request
 
