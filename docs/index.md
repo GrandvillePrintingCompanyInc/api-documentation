@@ -16,8 +16,6 @@ The GPC API is served over HTTPS.
 The following enviroments are available:
 
 - Development: `https://dev.nexgen365.com`
-- Staging: `https://staging.nexgen365.com`
-- Production: `https://nexgen365.com`
 
 
 ## Authentication
